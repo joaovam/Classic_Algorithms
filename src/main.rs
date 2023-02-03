@@ -1,10 +1,20 @@
-#[path = "Search/insertionSort.rs"] mod insertion_sort;
+#[path = "Sort/insertionSort.rs"] mod insertion_sort;
+#[path = "Sort/selectionSort.rs"] mod selection_sort;
+#[path = "Search/linearSearch.rs"] mod linear_search;
+
+
+
+use crate::insertion_sort::insertion_sort;
+use crate::linear_search::linear_search;
+use crate::selection_sort::selection_sort;
 
 fn main() {
 
-    let numbers = vec![4, 1, 2, 3, 2, 1];
+    let mut numbers = vec![1,1,1,1,1,5,6,7,1];
 
-    println!("new Vector {:?}", insertion_sort::insertion_sort(numbers));
+    numbers = selection_sort(numbers);
+
+    println!("Result {:?}", numbers);
 
     
 }

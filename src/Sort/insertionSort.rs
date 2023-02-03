@@ -15,6 +15,5 @@ pub fn insertion_sort( mut numbers: Vec<i32>) -> Vec<i32>{
         numbers[index] = key;
         
     }
-
     numbers
 }
