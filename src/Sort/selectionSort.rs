@@ -1,5 +1,5 @@
 
-pub fn selection_sort(mut numbers: Vec<i32>) -> Vec<i32>{
+pub fn selection_sort( numbers: &mut Vec<i32>){
 
 
     for i in 0..numbers.len() - 1{//do not iterate over the last element
@@ -12,5 +12,5 @@ pub fn selection_sort(mut numbers: Vec<i32>) -> Vec<i32>{
         }
         (numbers[i], numbers[smaller]) = (numbers[smaller], numbers[i]);
     }
-    numbers
+
 }
